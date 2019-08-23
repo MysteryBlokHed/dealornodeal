@@ -190,7 +190,7 @@ while playing:
         sleep(BOX_OPEN_DELAY)
 
         # Host reaction
-        if VALUES.index(boxes[saved_box].get_value()) <= offer: # Check if the player made a good decision with the banker deal
+        if boxes[saved_box].get_value() <= offer: # Check if the player made a good decision with the banker deal
             print(f"[HOST] {CURRENCY_SYMBOL}{boxes[saved_box].get_value()}! {get_positive()}") # Say something positive
         else:
             print(f"[HOST] {CURRENCY_SYMBOL}{boxes[saved_box].get_value()}. {get_negative()}") # Say something negative
