@@ -13,7 +13,8 @@ VALUES = (0.01, 1, 5, 10, 25, 50, 75, 100, 200, 300, 400, 500, 750, # Price opti
 BANKER_OFFER_FREQUENCY = 4 # The amount of turns per banker offer
 BANKER_PICKUP_DELAY = 3 # Amount of seconds to wait before answering banker call
 
-# Will divide the mean of all remaining values by these numbers (eg. mean/7), depending on if it's the first, second, or final third of the game
+# Will divide the mean of all remaining values by these numbers (mean of remaining values/7), depending on if it's the first, second, or final third of the game.
+# The banker will only call 3 times/game.
 FIRST_BANKER_OFFER = 8
 SECOND_BANKER_OFFER = 7
 THIRD_BANKER_OFFER = 1.75
@@ -30,13 +31,13 @@ box_order = []
 
 turn = 0
 
+random.seed()
+
 # Host response functions
 def get_positive():
-    random.seed()
     return random.choice(POSITIVE)
 
 def get_negative():
-    random.seed()
     return random.choice(NEGATIVE)
 
 # Other functions
@@ -196,3 +197,4 @@ while playing:
             print(f"[HOST] {CURRENCY_SYMBOL}{boxes[saved_box].get_value()}. {get_negative()}") # Say something negative
         
 print("[HOST] That's it for Deal Or No Deal!")
+input("Press enter to exit.")

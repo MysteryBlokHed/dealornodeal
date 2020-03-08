@@ -1,5 +1,5 @@
 # Deal Or No Deal!
-This is a Python console app that simulates the game show(s) [Deal Or No Deal](https://en.wikipedia.org/wiki/Deal_or_No_Deal).
+This is a text-based game written with Python that simulates the game show(s) [Deal Or No Deal](https://en.wikipedia.org/wiki/Deal_or_No_Deal).
 
 ## Requirements
 **Python v3.6+**  
@@ -27,6 +27,6 @@ I have a few variables that will let you customize the game a bit. The list of t
 
 - Banker Formula Options - Will divide the mean of all remaining values on the board by these numbers (eg. `mean/7`), depending on if it's the first, second, or final third (&frac13;) of the game
 
-- - `FIRST_BANKER_OFFER` (default: `8`) - Division number for the first third of the game
-- - `SECOND_BANKER_OFFER` (default: `7`) - Division number for the second third of the game
-- - `THIRD_BANKER_OFFER` (default: `1.75`) - Division number for the final third of the game
+    - `FIRST_BANKER_OFFER` (default: `8`) - Division number for the first third of the game
+    - `SECOND_BANKER_OFFER` (default: `7`) - Division number for the second third of the game
+    - `THIRD_BANKER_OFFER` (default: `1.75`) - Division number for the final third of the game
